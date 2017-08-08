@@ -48,7 +48,7 @@ gulp.task("serve", ["style"], function(){
 
 
 gulp.task("images", function() {
-   return gulp.src("build/img/**/*.{png,jpg,gif,svg}")
+   return gulp.src("build/img/**/*.{png,jpg,gif}")
    .pipe(imagemin([
      imagemin.optipng({optimizationLevel:3})
    ]))

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Нёрдс</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style-min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="page-header__inner">
+
+      <a class="page-header__logo" href="index.html">Nerds</a>
+
+      <nav class="main-nav">
+        <a class="main-nav__link" href="index.html">Студия</a>
+        <a class="main-nav__link" href="#">Клиенты</a>
+        <a class="main-nav__link  main-nav__link--active" href="catalog.html">Магазин</a>
+        <a class="main-nav__link" href="#">Контакты</a>
+        <a class="main-nav__link  main-nav__link--cart" href="#">Корзина</a>
+      </nav>
+
+    </div>
+
+    <h1 class="page-header__title">
+      Магазин готовых шаблонов
+    </h1>
+  </header>
+
+  <main class="main-content">
+
+    <section class="filter">
+      <form class="filter__form" method="get">
+
+        <fieldset class="filter__price">
+
+          <legend class="filter__title">
+            Стоимость
+          </legend>
+
+          <div class="filter__scale">
+            <div class="filter__bar"></div>
+            <div class="filter__bar  filter__bar--active"></div>
+            <div class="filter__control  filter__control--min"></div>
+            <div class="filter__control  filter__control--max"></div>
+          </div>
+
+          <label>
+            от
+            <input class="filter__num" type="number" name="min-price" value="" placeholder="0">
+          </label>
+          <label>
+            до
+            <input class="filter__num" type="number" name="max-price" value="" placeholder="15 000">
+          </label>
+        </fieldset>
+
+        <fieldset class="filter__grid-select">
+
+          <legend class="filter__title">
+            Сетка:
+          </legend>
+
+          <input type="radio" name="radio-check" id="check1" checked>
+          <label class="filter__grid" for="check1">Адаптивная</label>
+          <input type="radio" name="radio-check" id="check2">
+          <label class="filter__grid" for="check2">Фиксированная</label>
+          <input type="radio" name="radio-check" id="check3">
+          <label class="filter__grid" for="check3">Резиновая</label>
+
+        </fieldset>
+
+        <fieldset class="filter__content-select">
+
+          <legend class="filter__title">
+            Особенности:
+          </legend>
+
+          <input type="checkbox" name="check-slider" id="check-slider" checked>
+          <label for="check-slider">Слайдер</label>
+          <input type="checkbox" name="check-slider" id="check-features" checked>
+          <label for="check-features">Блок преимуществ</label>
+          <input type="checkbox" name="check-slider" id="check-news" checked>
+          <label for="check-news">Новости</label>
+          <input type="checkbox" name="check-slider" id="check-gallery" checked>
+          <label for="check-gallery">Галерея</label>
+          <input type="checkbox" name="check-slider" id="check-cart" checked>
+          <label for="check-cart">Корзина</label>
+
+        </fieldset>
+
+        <button class="button" type="submit">Показать</button>
+
+      </form>
+    </section>
+
+  </main>
+
+
+
+</body>
+</html>
