@@ -1,12 +1,237 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Нёрдс</title>
+  <link type="text/css" rel="stylesheet" href="css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
 
-  </body>
+<body>
+
+  <header class="page-header">
+    <div class="page-header__inner">
+<!-- Смущает отдельно висящая ссылка с логотипом, правильно ли это? -->
+      <a class="page-header__logo"></a>
+<!-- Можно ли делать навигацию не списком? -->
+      <nav class="page-header__main-nav  main-nav">
+        <a class="main-nav__link" href="#">Студия</a>
+        <a class="main-nav__link" href="#">Клиенты</a>
+        <a class="main-nav__link" href="#">Магазин</a>
+        <a class="main-nav__link" href="#">Контакты</a>
+        <a class="main-nav__link  main-nav__link--cart" href="#">Корзина</a>
+      </nav>
+
+    </div>
+
+    <section class="page-header__slider  slider">
+      <input class="slider__control" type="radio" name="radio" id="check1" checked>
+      <input class="slider__control" type="radio" name="radio" id="check2">
+      <input class="slider__control" type="radio" name="radio" id="check3">
+
+      <div class="slider__slide  slider__slide--first">
+        <b class="slider__title">
+           Долго, дорого, скурпулезно.
+        </b>
+        <p class="slider__desc">
+          Математически выверенный дизайн для вашего сайта или мобильного приложения.
+        </p>
+        <a class="button" href="#">
+           Узнать больше
+        </a>
+      </div>
+      <div class="slider__slide  slider__slide--second">
+        <b class="slider__title">
+           Любим математику
+           как никто другой
+        </b>
+        <p class="slider__desc">
+          Никакого креатива, только математические формулы для расчета идеальных пропорций.
+        </p>
+        <a class="button" href="#">
+           Узнать больше
+        </a>
+      </div>
+      <div class="slider__slide  slider__slide--third">
+        <b class="slider__title">
+           Только ночь, только хардкор
+        </b>
+        <p class="slider__desc">
+          Работать днем, как все? Мы&nbsp;против этого. Ближе к&nbsp;полуночи работа только начинается.
+        </p>
+        <a class="button" href="#">
+           Узнать больше
+        </a>
+      </div>
+
+      <div class="slider__controls">
+        <label for="check1" class="slider__control"></label>
+        <label for="check2" class="slider__control"></label>
+        <label for="check3" class="slider__control"></label>
+      </div>
+    </section>
+
+  </header>
+
+  <main class="main-page">
+
+    <section class="main-page__promo  promo">
+
+      <div class="promo__block">
+        <b class="promo__title">
+          Веб-сайты
+        </b>
+        <p class="promo__description">
+          Мир никогда не&nbsp;будет прежним после того как увидит ваш сайт!
+        </p>
+        <a class="button" href="#">
+          Заказать
+        </a>
+      </div>
+
+      <div class="promo__block">
+        <b class="promo__title">
+          Приложения
+        </b>
+        <p class="promo__description">
+          Покорите топ-10 приложений в AppStore и Google Play
+        </p>
+        <a class="button" href="#">
+          Заказать
+        </a>
+      </div>
+
+      <div class="promo__block">
+        <b class="promo__title">
+          Презентации
+        </b>
+        <p class="promo__description">
+          Вы даже не подозреваете, насколько вы изумительны!
+        </p>
+        <a class="button" href="#">
+          Заказать
+        </a>
+      </div>
+
+    </section>
+    <!-- Уместен ли тут article? И класс не нравится, но лучше не придумалось -->
+    <article class="main-page__about-us  about-us">
+
+      <section class="about-us__column">
+
+        <h2 class="about-us__title">
+            Мы&nbsp;&mdash; маленькая, но&nbsp;гордая
+            дизайн-студия из&nbsp;Краснодара.
+        </h2>
+
+        <p class="about-us__description">
+          Исповедуем принципы минимализма и&nbsp;чистоты. Ставим математический расчет превыше креатива. Работаем не&nbsp;покладая рук, как роботы.
+        </p>
+
+        <b class="about-us__subtitle">
+            Выполняем заказы на разработку:
+        </b>
+
+        <ul class="about-us__list">
+          <li class="about-us__item">
+            Веб-сайтов любой сложности
+          </li>
+          <li class="about-us__item">
+            Мобильных приложений для iOS и Android
+          </li>
+          <li class="about-us__item">
+            Слайдшоу и видео для корпоративных презентаций
+          </li>
+        </ul>
+
+      </section>
+
+      <section class="about-us__column">
+
+        <img class="about-us__logo" src="img/logo.png" width="" height="" alt="Логотип Nerds">
+        <b class="about-us__subtitle">
+            с 2004 года Любим точность во всем:
+        </b>
+
+        <div class="about-us__num">
+          146<span class="about-us__sup">%</span>
+          <p class="about-us__description">
+            Уровень самоотдачи
+          </p>
+        </div>
+
+        <div class="about-us__num">
+          100<span class="about-us__sup">%</span>
+          <p class="about-us__description">
+            Соблюдение сроков
+          </p>
+        </div>
+
+        <div class="about-us__num">
+          50<span class="about-us__sup">%</span>
+          <p class="about-us__description">
+            Минимальная предоплата
+          </p>
+        </div>
+
+      </section>
+
+    </article>
+
+    <section class="main-page__products  our-products">
+      <a class="our-products__link" href="#">
+          <img class="our-products__image" src="" width="" height="" alt="HTML-Academy">
+        </a>
+      <a class="our-products__link" href="#">
+          <img class="our-products__image" src="" width="" height="" alt="Barbershop Borodinski">
+        </a>
+      <a class="our-products__link" href="#">
+          <img class="our-products__image" src="" width="" height="" alt="Pink">
+        </a>
+      <a class="our-products__link" href="#">
+          <img class="our-products__image" src="" width="" height="" alt="Mishka">
+        </a>
+    </section>
+
+    <section class="main-page__map  map">
+      <div class="map__inner">
+        <div class="map__contacts  contacts">
+          <h2 class="contacts__title">
+              NЁRDS DESIGN STUDIO
+            </h2>
+          <p class="contacts__address">
+            191186, Санкт-Петербург, ул. Б.&nbsp;Конюшенная, д. 19/8
+          </p>
+          <a class="contacts__phone" href="tel:+7(812)275-75-75">
+              тел. +7 (812) 275-75-75
+            </a>
+          <a class="button">Напишите нам</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <section class="page-footer__socials  socials">
+      <a class="socials__link  socials__link--vk" href="#">ВКонтакте</a>
+      <a class="socials__link  socials__link--fb" href="#">Facebook</a>
+      <a class="socials__link  socials__link--ig" href="#">Instagram</a>
+    </section>
+
+    <section class="page-footer__promo">
+      <b class="page-footer__title">
+          Давайте дружить, это выгодно!
+        </b>
+      <p class="page-footer__description">
+        Скидка 10% для друзей из социальных сетей
+      </p>
+    </section>
+  </footer>
+
+
+
+</body>
+
 </html>
