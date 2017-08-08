@@ -1,0 +1,36 @@
+{
+  "name": "nerds",
+  "version": "1.0.0",
+  "description": "nerds",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlacademy-htmlcss/38944-nerds"
+  },
+  "author": "NataliaIlina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/htmlacademy-htmlcss/38944-nerds/issues"
+  },
+  "homepage": "https://github.com/htmlacademy-htmlcss/38944-nerds",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "css-mqpacker": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-less": "latest",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "latest",
+    "gulp-rename": "latest",
+    "gulp-svgmin": "latest",
+    "gulp-svgstore": "latest",
+    "run-sequence": "latest"
+  }
+}
