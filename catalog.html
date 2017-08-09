@@ -6,7 +6,7 @@
   <title>HTML Academy: Нёрдс</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style-min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
   <header class="page-header">
     <div class="page-header__inner">
 
-      <a class="page-header__logo" href="index.html">Nerds</a>
+      <a class="logo" href="index.html">Nerds</a>
 
       <nav class="main-nav">
         <a class="main-nav__link" href="index.html">Студия</a>
@@ -45,8 +45,8 @@
           <div class="filter__scale">
             <div class="filter__bar"></div>
             <div class="filter__bar  filter__bar--active"></div>
-            <div class="filter__control  filter__control--min"></div>
-            <div class="filter__control  filter__control--max"></div>
+            <div class="filter__control  filter__control--min">&bull;</div>
+            <div class="filter__control  filter__control--max">&bull;</div>
           </div>
 
           <label>
@@ -66,11 +66,11 @@
           </legend>
 
           <input type="radio" name="radio-check" id="check1" checked>
-          <label class="filter__grid" for="check1">Адаптивная</label>
+          <label class="filter__radio" for="check1">Адаптивная</label>
           <input type="radio" name="radio-check" id="check2">
-          <label class="filter__grid" for="check2">Фиксированная</label>
+          <label class="filter__radio" for="check2">Фиксированная</label>
           <input type="radio" name="radio-check" id="check3">
-          <label class="filter__grid" for="check3">Резиновая</label>
+          <label class="filter__radio" for="check3">Резиновая</label>
 
         </fieldset>
 
@@ -81,15 +81,15 @@
           </legend>
 
           <input type="checkbox" name="check-slider" id="check-slider" checked>
-          <label for="check-slider">Слайдер</label>
+          <label class="filter__checkbox" for="check-slider">Слайдер</label>
           <input type="checkbox" name="check-slider" id="check-features" checked>
-          <label for="check-features">Блок преимуществ</label>
+          <label class="filter__checkbox" for="check-features">Блок преимуществ</label>
           <input type="checkbox" name="check-slider" id="check-news" checked>
-          <label for="check-news">Новости</label>
+          <label class="filter__checkbox" for="check-news">Новости</label>
           <input type="checkbox" name="check-slider" id="check-gallery" checked>
-          <label for="check-gallery">Галерея</label>
+          <label class="filter__checkbox" for="check-gallery">Галерея</label>
           <input type="checkbox" name="check-slider" id="check-cart" checked>
-          <label for="check-cart">Корзина</label>
+          <label class="filter__checkbox" for="check-cart">Корзина</label>
 
         </fieldset>
 
@@ -103,32 +103,30 @@
         Сортировать:
       </h3>
 
-      <ul class="sort__list">
-        <li class="sort__item  sort__item--active">
+      <div class="sort__list">
+        <a href="#" class="sort__item  sort__item--active">
           По цене
-        </li>
-        <li class="sort__item">
+        </a>
+        <a href="#" class="sort__item">
           По типу
-        </li>
-        <li class="sort__item">
+        </a>
+        <a href="#" class="sort__item">
           По названию
-        </li>
-      </ul>
-<!-- Для переключателей лучше использовать список или можно просто div-ами? -->
-      <ul class="sort__controls">
-        <li class="sort__control  sort__control--down"></li>
-        <li class="sort__control  sort__control--up"></li>
-      </ul>
+        </a>
+      </div>
+
+      <div class="sort__controls">
+        <a class="sort__control  sort__control--down  sort__control--active"></a>
+        <a class="sort__control  sort__control--up"></a>
+      </div>
     </section>
 
     <div class="catalog">
-      <!-- карточка товара. не знаю где здесь правильно использовать ссылки -->
+
       <article class="product">
-        <header class="product__header">
-          <div class="product__decoration"></div>
-          <div class="product__decoration"></div>
-          <div class="product__decoration"></div>
-        </header>
+
+        <div class="product__dots"></div>
+
         <a class="product__link" href="#">
           <img class="product__image" src="" width="" height="" alt="Сайт для туристов Sedona">
         </a>
@@ -139,6 +137,7 @@
           </p>
           <a class="button" href="#">9 900 руб.</a>
         </section>
+
       </article>
 
     </div>
@@ -160,9 +159,9 @@
     </section>
 
     <section class="page-footer__promo">
-      <b class="page-footer__title">
+      <h2 class="page-footer__title">
           Давайте дружить, это выгодно!
-        </b>
+        </h2>
       <p class="page-footer__description">
         Скидка 10% для друзей из социальных сетей
       </p>
