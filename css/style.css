@@ -6,6 +6,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
+* {
+  outline: 1px solid #efc84a;
+}
 body {
   padding: 0;
   margin: 0;
@@ -16,4 +19,84 @@ body {
 img {
   width: 100%;
   height: auto;
+}
+.page-header {
+  height: 545px;
+  font-family: inherit;
+  background-color: #eeeeee;
+}
+.page-header__inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 115px;
+}
+.logo {
+  display: block;
+  width: 160px;
+  height: 65px;
+  margin-top: auto;
+  background: url("../img/nerds-logo.png") no-repeat center;
+  text-indent: 100%;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
+.logo:hover {
+  opacity: 0.8;
+}
+.logo:active {
+  opacity: 0.3;
+}
+.main-nav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+          align-items: center;
+  flex-wrap: wrap;
+  min-width: 800px;
+  max-width: 960px;
+  margin-top: auto;
+}
+.main-nav__link {
+  color: #000000;
+  transition: color 0.5s ease;
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  margin-right: 47px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.main-nav__link:hover {
+  color: #fb565a;
+}
+.main-nav__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.main-nav__link--cart {
+  margin-left: auto;
+  margin-right: 0;
+  padding-left: 40px;
+  background: url("../img/icons/cart-icon.png") no-repeat left center;
+}
+.main-nav__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fb565a;
 }

@@ -26,14 +26,9 @@ gulp.task("style", function() {
          "last 2 Edge versions"
       ]
     }))
-  .pipe(postcss([
-         mqpacker({
-           sort: true
-          })
-    ]))
   .pipe(gulp.dest("css"))
   .pipe(minify())
-  .pipe(rename("style-min.css"))
+  .pipe(rename("style.min.css"))
   .pipe(gulp.dest("css"))
   .pipe(browserSync.reload({stream: true}));
 });
