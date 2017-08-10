@@ -1,0 +1,103 @@
+.slider{
+  .inner();
+  height: 430px;
+  position: relative;
+
+  & input[type=radio]{
+    display: none;
+  }
+
+  & #check1:checked ~ .slider__controls .slider__control--first::after,
+    #check2:checked ~ .slider__controls .slider__control--second::after,
+    #check3:checked ~ .slider__controls .slider__control--third::after{
+    opacity: 1;
+  }
+
+  & #check1:checked ~ .slider__slide--first,
+    #check2:checked ~ .slider__slide--second,
+    #check3:checked ~ .slider__slide--third{
+    opacity: 1;
+  }
+
+  &__slide{
+    position: absolute;
+    width: 1160px;
+    height: 430px;
+    padding-top: 78px;
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
+
+    &--first{
+      background: url("../img/slide1.png") no-repeat 430px bottom;
+    }
+
+    &--second{
+      background: url("../img/slide2.png") no-repeat right bottom;
+    }
+
+    &--third{
+      background: url("../img/slide3.png") no-repeat right bottom;
+
+      & .slider__description{
+        width: 360px;
+      }
+    }
+  }
+
+  &__title{
+    width: 520px;
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: @font-size-h1;
+    line-height: @line-height-h1;
+    font-weight: @medium;
+  }
+
+  &__description{
+    width: 420px;
+    margin-bottom: 40px;
+    font-size: @font-size;
+    line-height: @line-height;
+    font-weight: @regular;
+    color: @text-color;
+  }
+
+  &__controls{
+    position: absolute;
+    left: 50%;
+    margin-left: -45px;
+    bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+    height: 18px;
+  }
+
+  &__control{
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    text-indent: 100%;
+    overflow: hidden;
+    background-color: @white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -4px;
+      left: 50%;
+      margin-left: -4px;
+      opacity: 0;
+      width: 8px;
+      height: 8px;
+      background-color: @white;
+      border: 2px solid @black-40;
+      border-radius: 50%;
+    }
+  }
+}
