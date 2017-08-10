@@ -7,9 +7,9 @@
     display: none;
   }
 
-  & #check1:checked ~ .slider__controls .slider__control--first::after,
-    #check2:checked ~ .slider__controls .slider__control--second::after,
-    #check3:checked ~ .slider__controls .slider__control--third::after{
+  & #check1:checked ~ .slider__controls label:nth-of-type(1)::after,
+    #check2:checked ~ .slider__controls label:nth-of-type(2)::after,
+    #check3:checked ~ .slider__controls label:nth-of-type(3)::after{
     opacity: 1;
   }
 
@@ -17,6 +17,7 @@
     #check2:checked ~ .slider__slide--second,
     #check3:checked ~ .slider__slide--third{
     opacity: 1;
+    z-index: 1;
   }
 
   &__slide{
@@ -25,7 +26,7 @@
     height: 430px;
     padding-top: 78px;
     opacity: 0;
-    transition: opacity 0.7s ease-out;
+    z-index: 0;
 
     &--first{
       background: url("../img/slide1.png") no-repeat 430px bottom;
@@ -64,6 +65,7 @@
 
   &__controls{
     position: absolute;
+    z-index: 2;
     left: 50%;
     margin-left: -45px;
     bottom: 96px;
