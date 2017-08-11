@@ -182,7 +182,7 @@
     </article>
 
     <section class="our-products">
-      <a class="our-products__link" href="#">
+      <a class="our-products__link" href="https://htmlacademy.ru/intensive/htmlcss">
         <img class="our-products__image" src="img/html-logo.png" width="199" height="68" alt="HTML-Academy">
       </a>
       <a class="our-products__link" href="#">
@@ -208,7 +208,7 @@
           <a class="contacts__phone" href="tel:+7(812)275-75-75">
               тел. +7 (812) 275-75-75
           </a>
-          <a class="button">Напишите нам</a>
+          <a class="button  button--modal" href="feedback.html">Напишите нам</a>
         </div>
       </div>
     </section>
@@ -232,8 +232,35 @@
     </section>
   </footer>
 
+<article class="modal-feedback">
+  <div class="modal-feedback__close"></div>
 
+  <form class="feedback" method="post" action="#">
 
+    <h2 class="feedback__title">
+      Напишите нам
+    </h2>
+
+    <label class="feedback__label  feedback__label--name">
+      Ваше имя:<br>
+      <input class="feedback__input" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста" required>
+    </label>
+
+    <label class="feedback__label  feedback__label--email">
+      Ваш email:<br>
+      <input class="feedback__input" type="email" name="email" value="" placeholder="Для отправки ответа" required>
+    </label>
+
+    <label class="feedback__label">
+      Текст письма:<br>
+      <textarea class="feedback__text-field" name="text" placeholder="В свободной форме"></textarea>
+    </label>
+
+    <button class="button" type="submit">Отправить</button>
+  </form>
+</article>
+
+<script src="js/modal.js"></script>
 </body>
 
 </html>

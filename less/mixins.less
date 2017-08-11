@@ -67,3 +67,22 @@
     box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.1) inset;
   }
 }
+
+.input-style(){
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+
+  &:hover{
+    border-color: #b4b9bb;
+  }
+
+  &:focus{
+    border-color: @black;
+    color: @black;
+  }
+
+  &:focus:invalid{
+    border-color: @red-darken;
+    color: @red-darken;
+  }
+}
