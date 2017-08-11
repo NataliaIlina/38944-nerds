@@ -1,0 +1,67 @@
+.socials{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+  height: 80px;
+}
+
+.socials__link{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  text-indent: 100%;
+  overflow: hidden;
+  background-color: @gray;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+
+  &--vk::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 50%;
+    margin-left: -13px;
+    width: 26px;
+    height: 15px;
+    background: url("../img/icons/vk-icon.png") no-repeat 50%;
+  }
+
+  &--fb::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -11px;
+    left: 50%;
+    margin-left: -6px;
+    width: 12px;
+    height: 22px;
+    background: url("../img/icons/fb-icon.png") no-repeat 50%;
+  }
+
+  &--ig::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    width: 21px;
+    height: 21px;
+    background: url("../img/icons/insta-icon.png") no-repeat 50%;
+  }
+
+  &:hover{
+    background-color: @red-darken;
+  }
+
+  &:active{
+    background-color: @red-dark;
+    box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.1) inset;
+  }
+
+  &:active::after{
+    opacity: 0.3;
+  }
+}
