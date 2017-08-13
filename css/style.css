@@ -6,6 +6,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
+* {
+  outline: 1px solid #efc84a;
+}
 body {
   padding: 0;
   margin: 0;
@@ -23,8 +26,11 @@ img {
   background-color: #eeeeee;
 }
 .page-header--feedback {
-  height: 155px;
+  height: 320px;
   margin-bottom: 70px;
+}
+.page-header--inner-page {
+  height: 355px;
 }
 .page-header__inner {
   width: 1160px;
@@ -36,6 +42,13 @@ img {
   -webkit-box-align: center;
           align-items: center;
   height: 115px;
+}
+.page-header__title {
+  margin: 77px 0;
+  text-align: center;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
 }
 .logo {
   display: block;
@@ -222,9 +235,14 @@ img {
   color: rgba(255, 255, 255, 0.3);
   box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.1) inset;
 }
-.promo {
+.main-content {
   width: 1160px;
   margin: 0 auto;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+.promo {
   min-height: 510px;
   display: -webkit-box;
   display: flex;
@@ -293,8 +311,6 @@ img {
   margin-bottom: 33px;
 }
 .about-us {
-  width: 1160px;
-  margin: 0 auto;
   min-height: 525px;
   display: -webkit-box;
   display: flex;
@@ -380,8 +396,6 @@ img {
   font-size: 29px;
 }
 .our-products {
-  width: 1160px;
-  margin: 0 auto;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -488,6 +502,10 @@ img {
   text-decoration: none;
 }
 .page-footer {
+  background-color: #ffffff;
+  color: #000000;
+}
+.page-footer__inner {
   width: 1160px;
   margin: 0 auto;
   display: -webkit-box;
@@ -498,8 +516,6 @@ img {
           align-items: flex-start;
   height: 217px;
   padding-top: 70px;
-  background-color: #ffffff;
-  color: #000000;
 }
 .page-footer__promo {
   width: 760px;
@@ -603,6 +619,14 @@ img {
 .modal-feedback--show {
   display: block;
 }
+.modal-feedback__title {
+  margin: 0;
+  margin-bottom: 40px;
+  width: 100%;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
 .modal-feedback__close {
   position: absolute;
   right: 88px;
@@ -648,19 +672,11 @@ img {
   flex-wrap: wrap;
   width: 760px;
   margin: 0 auto;
-  height: 440px;
+  height: 353px;
 }
 .feedback .button {
   width: 260px;
   margin-top: 20px;
-}
-.feedback__title {
-  margin: 0;
-  margin-bottom: 10px;
-  width: 100%;
-  font-size: 45px;
-  line-height: 45px;
-  font-weight: 500;
 }
 .feedback__label {
   font-size: 16px;

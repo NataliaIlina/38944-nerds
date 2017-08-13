@@ -34,7 +34,7 @@
   <main class="main-content">
 
     <section class="filter">
-      <form class="filter__form" method="get">
+      <form class="filter__form" method="get" action="#">
 
         <fieldset class="filter__price">
 
@@ -152,7 +152,27 @@
   </main>
 
   <footer class="page-footer">
-    <section class="page-footer__socials  socials">
+    <section class="map">
+      <div class="map__inner">
+        <div class="contacts">
+          <h2 class="contacts__title">
+              Nёrds Design Studio
+          </h2>
+          <p class="contacts__address">
+            191186, Санкт-Петербург,<br>
+            ул. Б.&nbsp;Конюшенная, д. 19/8
+          </p>
+          <a class="contacts__phone" href="tel:+7(812)275-75-75">
+              тел. +7 (812) 275-75-75
+          </a>
+          <a class="button  button--modal" href="feedback.html">Напишите нам</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-footer__inner">
+
+    <section class="socials">
       <a class="socials__link  socials__link--vk" href="#">ВКонтакте</a>
       <a class="socials__link  socials__link--fb" href="#">Facebook</a>
       <a class="socials__link  socials__link--ig" href="#">Instagram</a>
@@ -161,12 +181,44 @@
     <section class="page-footer__promo">
       <h2 class="page-footer__title">
           Давайте дружить, это выгодно!
-        </h2>
+      </h2>
       <p class="page-footer__description">
         Скидка 10% для друзей из социальных сетей
       </p>
     </section>
+
+  </div>
   </footer>
+
+  <article class="modal-feedback">
+    <a class="modal-feedback__close" href="catalog.html"></a>
+
+      <h2 class="modal-feedback__title">
+        Напишите нам
+      </h2>
+
+    <form class="feedback" method="post" action="#">
+
+      <label class="feedback__label  feedback__label--name">
+        Ваше имя:<br>
+        <input class="feedback__input" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста" required>
+      </label>
+
+      <label class="feedback__label  feedback__label--email">
+        Ваш email:<br>
+        <input class="feedback__input" type="email" name="email" value="" placeholder="Для отправки ответа" required>
+      </label>
+
+      <label class="feedback__label">
+        Текст письма:<br>
+        <textarea class="feedback__text-field" name="text" placeholder="В свободной форме"></textarea>
+      </label>
+
+      <button class="button" type="submit">Отправить</button>
+    </form>
+  </article>
+
+  <script src="js/modal.js"></script>
 
 </body>
 </html>
