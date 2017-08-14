@@ -44,7 +44,9 @@ img {
   height: 115px;
 }
 .page-header__title {
-  margin: 77px 0;
+  width: 1160px;
+  margin: 0 auto;
+  margin: 77px auto;
   text-align: center;
   font-size: 55px;
   line-height: 55px;
