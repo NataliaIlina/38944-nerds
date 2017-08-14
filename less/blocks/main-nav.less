@@ -21,10 +21,21 @@
     text-decoration: none;
 
     &--cart{
+      position: relative;
       margin-left: auto;
       margin-right: 0;
       padding-left: 40px;
-      background: url("../img/icons/cart-icon.png") no-repeat left center;
+
+      &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background: url("../img/icons/css_sprite.png") -10px -10px;
+      }
     }
 
     &--active::after{

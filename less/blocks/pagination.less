@@ -1,0 +1,42 @@
+.pagination{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 445px;
+  margin-bottom: 60px;
+}
+
+.pagination__page{
+  .btn-bg-gray;
+  width: 50px;
+  padding: 16px 0;
+  margin-right: 11px;
+  font-size: @font-size;
+  line-height: 18px;
+  font-weight: @medium;
+  text-transform: uppercase;
+  color: @black;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+
+  &--active{
+    padding: 13px 0;
+    background-color: @white;
+    border: 3px solid #dbdbdb;
+
+    &:hover{
+      background: none;
+    }
+
+    &:active{
+      color: @black;
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  &--next{
+    min-width: 260px;
+  }
+}

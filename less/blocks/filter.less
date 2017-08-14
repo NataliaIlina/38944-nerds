@@ -1,0 +1,221 @@
+.filter{
+  width: 260px;
+
+  & fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  & input[type=radio],
+    input[type=checkbox]{
+    display: none;
+  }
+// оживление слайдера считается стилизацией по id? Лэйблы привязывать лучше так или по nth-child?
+  & #check1:checked + label[for=check1]::after,
+    #check2:checked + label[for=check2]::after,
+    #check3:checked + label[for=check3]::after{
+    display: block;
+  }
+
+  & #check_slider:checked + label[for=check_slider]::before,
+    #check_features:checked + label[for=check_features]::before,
+    #check_news:checked + label[for=check_news]::before,
+    #check_gallery:checked + label[for=check_gallery]::before,
+    #check_cart:checked + label[for=check_cart]::before{
+      width: 27px;
+      border: none;
+      background: @white url("../img/icons/css_sprite.png") no-repeat -10px -163px;
+  }
+}
+// Стили для Legend
+.filter__title{
+  display: block;
+  margin-bottom: 15px;
+  font-size: @font-size-subtitle;
+  line-height: @line-height-h2;
+  color: @black;
+  font-weight: @bold;
+  text-transform: uppercase;
+}
+// Слайдер с ценами
+.filter__price{
+  min-height: 320px;
+  font-size: @font-size;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: @text-color;
+  font-weight: @regular;
+
+  & .filter__title{
+    height: 133px;
+    padding-top: 55px;
+    margin-bottom: 0;
+  }
+}
+
+.filter__scale{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 14px;
+  background-color: @gray-light;
+  border-radius: 3px;
+}
+
+.filter__bar{
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -110px;
+  width: 220px;
+  height: 2px;
+  background-color: #d7dcde;
+
+  &--active{
+    min-width: 0;
+    max-width: 220px;
+    width: 145px;
+    background-color: @green;
+  }
+}
+
+.filter__control{
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  text-indent: 100%;
+  overflow: hidden;
+  background-color: #ababab;
+  border: 8px solid @white;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+//Инпуты для ценового фильтра
+.filter__inner{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter__num{
+  width: 80px;
+  padding: 8px 0;
+  margin-left: 8px;
+  font-size: @font-size;
+  line-height: 22px;
+  text-align: center;
+  background-color: @gray-light;
+  border-radius: 3px;
+  border: none;
+}
+
+// фильтр с радио-кнопками
+.filter__grid-select{
+  min-height: 190px;
+}
+
+.filter__radio{
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 37px;
+  font-size: @font-size;
+  line-height: 20px;
+  color: @text-color;
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+  }
+
+  &::before{
+    top: -3px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: @white;
+    border: 4px solid @gray-dark;
+  }
+
+  &::after{
+    display: none;
+    top: 5px;
+    left: 8px;
+    width: 9px;
+    height: 9px;
+    background-color: @gray-dark;
+  }
+
+  &:hover{
+    color: @black;
+  }
+
+  &:hover::before,
+  &:hover::after{
+    opacity: 1;
+  }
+
+  &:active{
+    color: @text-color-30;
+  }
+
+  &:active::before,
+  &:active::after{
+    opacity: 0.1;
+  }
+}
+//фильтр с чекбоксами
+.filter__content-select{
+  min-height: 275px;
+}
+
+.filter__checkbox{
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 37px;
+  font-size: @font-size;
+  line-height: 20px;
+  color: @text-color;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background-color: @white;
+    border: 2px solid @gray-dark;
+    border-radius: 3px;
+    opacity: 0.4;
+  }
+
+    &:hover{
+      color: @black;
+    }
+
+    &:hover::before,
+    &:hover::after{
+      opacity: 1;
+    }
+
+    &:active{
+      color: @text-color-30;
+    }
+
+    &:active::before,
+    &:active::after{
+      opacity: 0.1;
+    }
+
+}

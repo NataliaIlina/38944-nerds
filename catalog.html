@@ -31,7 +31,7 @@
     </h1>
   </header>
 
-  <main class="main-content">
+  <main class="main-content  main-content--catalog">
 
     <section class="filter">
       <form class="filter__form" method="get" action="#">
@@ -39,24 +39,27 @@
         <fieldset class="filter__price">
 
           <legend class="filter__title">
-            Стоимость
+            Стоимость:
           </legend>
 
           <div class="filter__scale">
             <div class="filter__bar"></div>
             <div class="filter__bar  filter__bar--active"></div>
-            <div class="filter__control  filter__control--min">&bull;</div>
-            <div class="filter__control  filter__control--max">&bull;</div>
+            <div class="filter__control" style="left: 20px">&bull;</div>
+            <div class="filter__control" style="left: 160px">&bull;</div>
           </div>
 
-          <label>
-            от
-            <input class="filter__num" type="number" name="min-price" value="" placeholder="0">
-          </label>
-          <label>
-            до
-            <input class="filter__num" type="number" name="max-price" value="" placeholder="15 000">
-          </label>
+          <div class="filter__inner">
+            <label class="filter__price-label">
+             от
+              <input class="filter__num" type="text"   name="min-price" placeholder="0">
+            </label>
+            <label class="filter__price-label">
+              до
+              <input class="filter__num" type="text"   name="max-price" placeholder="15 000">
+            </label>
+          </div>
+
         </fieldset>
 
         <fieldset class="filter__grid-select">
@@ -65,11 +68,11 @@
             Сетка:
           </legend>
 
-          <input type="radio" name="radio-check" id="check1" checked>
+          <input type="radio" name="radio-check" id="check1" value="adaptive" checked>
           <label class="filter__radio" for="check1">Адаптивная</label>
-          <input type="radio" name="radio-check" id="check2">
+          <input type="radio" name="radio-check" id="check2" value="fixed">
           <label class="filter__radio" for="check2">Фиксированная</label>
-          <input type="radio" name="radio-check" id="check3">
+          <input type="radio" name="radio-check" id="check3" value="fluid">
           <label class="filter__radio" for="check3">Резиновая</label>
 
         </fieldset>
@@ -80,79 +83,157 @@
             Особенности:
           </legend>
 
-          <input type="checkbox" name="check-slider" id="check-slider" checked>
-          <label class="filter__checkbox" for="check-slider">Слайдер</label>
-          <input type="checkbox" name="check-slider" id="check-features" checked>
-          <label class="filter__checkbox" for="check-features">Блок преимуществ</label>
-          <input type="checkbox" name="check-slider" id="check-news" checked>
-          <label class="filter__checkbox" for="check-news">Новости</label>
-          <input type="checkbox" name="check-slider" id="check-gallery" checked>
-          <label class="filter__checkbox" for="check-gallery">Галерея</label>
-          <input type="checkbox" name="check-slider" id="check-cart" checked>
-          <label class="filter__checkbox" for="check-cart">Корзина</label>
+          <input type="checkbox" name="checkbox" value="slider" id="check_slider" checked>
+          <label class="filter__checkbox" for="check_slider">
+            Слайдер
+          </label>
+
+          <input type="checkbox" name="checkbox" value="features" id="check_features">
+          <label class="filter__checkbox" for="check_features">
+            Блок преимуществ
+          </label>
+
+          <input type="checkbox" name="checkbox" value="news" id="check_news" checked>
+          <label class="filter__checkbox" for="check_news">
+            Новости
+          </label>
+
+          <input type="checkbox" name="checkbox" value="gallery" id="check_gallery" >
+          <label class="filter__checkbox" for="check_gallery">
+            Галерея
+          </label>
+
+          <input type="checkbox" name="checkbox" value="cart" id="check_cart">
+          <label class="filter__checkbox" for="check_cart">
+            Корзина
+          </label>
 
         </fieldset>
 
-        <button class="button" type="submit">Показать</button>
+        <button class="button  button--filter" type="submit">Показать</button>
 
       </form>
     </section>
 
-    <section class="sort">
-      <h3 class="sort__title">
-        Сортировать:
-      </h3>
+    <div class="main-content__inner">
 
-      <div class="sort__list">
-        <a href="#" class="sort__item  sort__item--active">
-          По цене
-        </a>
-        <a href="#" class="sort__item">
-          По типу
-        </a>
-        <a href="#" class="sort__item">
-          По названию
-        </a>
+      <section class="sort">
+        <h3 class="sort__title">
+          Сортировать:
+        </h3>
+
+        <div class="sort__list">
+          <a href="#" class="sort__item  sort__item--active">
+            По цене
+          </a>
+          <a href="#" class="sort__item">
+            По типу
+          </a>
+          <a href="#" class="sort__item">
+            По названию
+          </a>
+        </div>
+
+        <div class="sort__controls">
+          <a class="sort__control  sort__control--down  sort__control--active"></a>
+          <a class="sort__control  sort__control--up"></a>
+        </div>
+      </section>
+
+      <div class="catalog">
+
+        <article class="product">
+          <div class="product__dots"></div>
+          <img class="product__image" src="img/img-sedona.jpg"   width="360" height="576" alt="Сайт для туристов   Sedona">
+          <section class="product__info">
+            <a class="product__title" href="#">Sedona</a>
+            <p class="product__description">
+              Информационный сайт для&nbsp;туристов
+            </p>
+            <a class="button  button--product" href="#">9 900 руб.</a>
+          </section>
+        </article>
+
+        <article class="product">
+          <div class="product__dots"></div>
+          <img class="product__image" src="img/img-pink.jpg"   width="360" height="576" alt="Продуктовый лендинг
+           приложения для iOS и Android Pink">
+          <section class="product__info">
+            <a class="product__title" href="#">Pink App</a>
+            <p class="product__description">
+              Продуктовый лендинг
+              приложения для iOS и Android
+            </p>
+            <a class="button  button--product" href="#">9 900 руб.</a>
+          </section>
+        </article>
+
+        <article class="product">
+          <div class="product__dots"></div>
+          <img class="product__image" src="img/img-barbershop.jpg"   width="360" height="576" alt="Сайт салона красоты   Barbershop">
+          <section class="product__info">
+            <a class="product__title" href="#">Barbershop</a>
+            <p class="product__description">
+              Сайт салона красоты. Для&nbsp;мужчин, да.
+            </p>
+            <a class="button  button--product" href="#">9 900 руб.</a>
+          </section>
+        </article>
+
+        <article class="product">
+          <div class="product__dots"></div>
+          <img class="product__image" src="img/img-mishka.jpg" width="360" height="576" alt="Интернет-магазин вязаных игрушек Mishka">
+          <section class="product__info">
+            <a class="product__title" href="#">Mishka</a>
+            <p class="product__description">
+              Интернет-магазин вязаных&nbsp;игрушек
+            </p>
+            <a class="button  button--product" href="#">9 900 руб.</a>
+          </section>
+        </article>
+
+        <article class="product">
+          <div class="product__dots"></div>
+          <img class="product__image" src="img/img-aplus.jpg" width="360" height="576" alt="Лендинг курсов повышения квалификации A Plus">
+          <section class="product__info">
+            <a class="product__title" href="#">A Plus</a>
+            <p class="product__description">
+              Лендинг курсов повышения квалификации
+            </p>
+            <a class="button  button--product" href="#">9 900 руб.</a>
+          </section>
+        </article>
+
+        <article class="product">
+          <div class="product__dots"></div>
+          <img class="product__image" src="img/img-kvast.jpg" width="360" height="576" alt="Промо-сайт производителя
+           крафтового кваса Кваст">
+          <section class="product__info">
+            <a class="product__title" href="#">Кваст</a>
+            <p class="product__description">
+              Промо-сайт производителя
+              крафтового кваса
+            </p>
+            <a class="button  button--product" href="#">9 900 руб.</a>
+          </section>
+        </article>
+
       </div>
 
-      <div class="sort__controls">
-        <a class="sort__control  sort__control--down  sort__control--active"></a>
-        <a class="sort__control  sort__control--up"></a>
-      </div>
-    </section>
 
-    <div class="catalog">
+      <nav class="pagination">
+        <a class="pagination__page  pagination__page--active">1</a>
+        <a class="pagination__page" href="#">2</a>
+        <a class="pagination__page" href="#">3</a>
+        <a class="pagination__page  pagination__page--next" href="#">Следующая</a>
+      </nav>
 
-      <article class="product">
-
-        <div class="product__dots"></div>
-
-        <a class="product__link" href="#">
-          <img class="product__image" src="" width="" height="" alt="Сайт для туристов Sedona">
-        </a>
-        <section class="product__info">
-          <h1 class="product__title">Sedona</h1>
-          <p class="product__description">
-            Информационный сайт для туристов
-          </p>
-          <a class="button" href="#">9 900 руб.</a>
-        </section>
-
-      </article>
-
-    </div>
-
-    <div class="pagination">
-      <a class="pagination__page  pagination__page--active">1</a>
-      <a class="pagination__page" href="#">2</a>
-      <a class="pagination__page" href="#">3</a>
-      <a class="button  pagination__next" href="#">Следующая</a>
     </div>
 
   </main>
 
   <footer class="page-footer">
-    <section class="map">
+    <section class="map" id="yandex-map">
       <div class="map__inner">
         <div class="contacts">
           <h2 class="contacts__title">
@@ -219,6 +300,7 @@
   </article>
 
   <script src="js/modal.js"></script>
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5eb74863ffbc439487fa9a2e5d461b7223803c66cbfb3c9e70ac52620355f860&amp;width=100%25&amp;height=416&amp;id=yandex-map&amp;lang=ru_RU&amp;scroll=true"></script>
 
 </body>
 </html>
