@@ -10,12 +10,9 @@
 </head>
 
 <body>
-
   <header class="page-header">
     <div class="page-header__inner">
-
       <a class="logo" href="index.html">Nerds</a>
-
       <nav class="main-nav">
         <a class="main-nav__link  main-nav__link--active" href="index.html">Студия</a>
         <a class="main-nav__link" href="#">Клиенты</a>
@@ -23,14 +20,11 @@
         <a class="main-nav__link" href="#">Контакты</a>
         <a class="main-nav__link  main-nav__link--cart" href="#">Корзина</a>
       </nav>
-
     </div>
-
     <section class="slider">
-      <input class="slider__check1" type="radio" name="radio" id="check1" checked>
-      <input class="slider__check2"  type="radio" name="radio" id="check2">
-      <input class="slider__check3" type="radio" name="radio" id="check3">
-
+      <input class="visually-hidden" type="radio" name="radio" id="check1" checked>
+      <input class="visually-hidden"  type="radio" name="radio" id="check2">
+      <input class="visually-hidden" type="radio" name="radio" id="check3">
       <div class="slider__slide  slider__slide--first">
         <h2 class="slider__title">
            Долго, дорого, скрупулезно.
@@ -65,20 +59,22 @@
            Узнать больше
         </a>
       </div>
-
       <div class="slider__controls">
-        <label for="check1" class="slider__control">&bull;</label>
-        <label for="check2" class="slider__control">&bull;</label>
-        <label for="check3" class="slider__control">&bull;</label>
+        <label for="check1" class="slider__control">
+          <span class="visually-hidden">Показать первый слайд</span>
+        </label>
+        <label for="check2" class="slider__control">
+          <span class="visually-hidden">Показать второй слайд</span>
+        </label>
+        <label for="check3" class="slider__control">
+          <span class="visually-hidden">Показать третий слайд</span>
+        </label>
       </div>
     </section>
-
   </header>
 
   <main class="main-content">
-
     <article class="promo">
-
       <section class="promo__block  promo__block--sites">
         <h3 class="promo__title">
           Веб-сайты
@@ -90,7 +86,6 @@
           Заказать
         </a>
       </section>
-
       <section class="promo__block  promo__block--apps">
         <h3 class="promo__title">
           Приложения
@@ -102,7 +97,6 @@
           Заказать
         </a>
       </section>
-
       <section class="promo__block  promo__block--presentations">
         <h3 class="promo__title">
           Презентации
@@ -114,26 +108,19 @@
           Заказать
         </a>
       </section>
-
     </article>
-
     <article class="about-us">
-
       <section class="about-us__column">
-
         <h2 class="about-us__title">
             Мы&nbsp;&mdash; маленькая, но&nbsp;гордая
             дизайн-студия из&nbsp;Краснодара.
         </h2>
-
         <p class="about-us__description">
           Исповедуем принципы минимализма и&nbsp;чистоты. Ставим математический расчет превыше креатива. Работаем не&nbsp;покладая рук, как роботы.
         </p>
-
         <h3 class="about-us__subtitle">
             Выполняем заказы на разработку:
         </h3>
-
         <ul class="about-us__list">
           <li class="about-us__item">
             Веб-сайтов любой сложности
@@ -145,42 +132,32 @@
             Слайдшоу и видео для корпоративных презентаций
           </li>
         </ul>
-
       </section>
-
       <section class="about-us__column  about-us__column--logo">
-
         <img class="about-us__logo" src="img/logo-illustration.png" width="360" height="208" alt="Логотип Nerds">
-
         <h3 class="about-us__subtitle">
             с 2004 года Любим точность во всем:
         </h3>
-
         <div class="about-us__num">
           146<sup>%</sup>
           <p class="about-us__description">
             Уровень самоотдачи
           </p>
         </div>
-
         <div class="about-us__num">
           100<sup>%</sup>
           <p class="about-us__description">
             Соблюдение сроков
           </p>
         </div>
-
         <div class="about-us__num">
           50<sup>%</sup>
           <p class="about-us__description">
             Минимальная предоплата
           </p>
         </div>
-
       </section>
-
     </article>
-
     <section class="our-products">
       <a class="our-products__link" href="https://htmlacademy.ru/intensive/htmlcss">
         <img class="our-products__image" src="img/html-logo.png" width="199" height="68" alt="HTML-Academy">
@@ -195,9 +172,6 @@
         <img class="our-products__image" src="img/mishka-logo.png" width="173" height="84" alt="Mishka">
       </a>
     </section>
-
-
-
   </main>
 
   <footer class="page-footer">
@@ -218,15 +192,12 @@
         </div>
       </div>
     </section>
-
     <div class="page-footer__inner">
-
     <section class="socials">
       <a class="socials__link  socials__link--vk" href="#">ВКонтакте</a>
       <a class="socials__link  socials__link--fb" href="#">Facebook</a>
       <a class="socials__link  socials__link--ig" href="#">Instagram</a>
     </section>
-
     <section class="page-footer__promo">
       <h2 class="page-footer__title">
           Давайте дружить, это выгодно!
@@ -235,33 +206,27 @@
         Скидка 10% для друзей из социальных сетей
       </p>
     </section>
-
   </div>
-  </footer>
+</footer>
 
 <article class="modal-feedback">
   <a class="modal-feedback__close" href="index.html"></a>
     <h2 class="modal-feedback__title">
       Напишите нам
     </h2>
-
   <form class="feedback" method="post" action="#">
-
     <label class="feedback__label  feedback__label--name">
       Ваше имя:<br>
       <input class="feedback__input" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста" required>
     </label>
-
     <label class="feedback__label  feedback__label--email">
       Ваш email:<br>
       <input class="feedback__input" type="email" name="email" value="" placeholder="Для отправки ответа" required>
     </label>
-
     <label class="feedback__label">
       Текст письма:<br>
       <textarea class="feedback__text-field" name="text" placeholder="В свободной форме"></textarea>
     </label>
-
     <button class="button" type="submit">Отправить</button>
   </form>
 </article>

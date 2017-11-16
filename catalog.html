@@ -8,14 +8,10 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext">
 </head>
-
 <body>
-
   <header class="page-header    page-header--inner-page">
     <div class="page-header__inner">
-
       <a class="logo" href="index.html">Nerds</a>
-
       <nav class="main-nav">
         <a class="main-nav__link" href="index.html">Студия</a>
         <a class="main-nav__link" href="#">Клиенты</a>
@@ -23,105 +19,88 @@
         <a class="main-nav__link" href="#">Контакты</a>
         <a class="main-nav__link  main-nav__link--cart" href="#">Корзина</a>
       </nav>
-
     </div>
-
     <h1 class="page-header__title">
       Магазин готовых шаблонов
     </h1>
   </header>
 
   <main class="main-content  main-content--catalog">
-
     <section class="filter">
       <form class="filter__form" method="get" action="#">
-
         <fieldset class="filter__price">
-
           <legend class="filter__title">
             Стоимость:
           </legend>
-
           <div class="filter__scale">
             <div class="filter__bar"></div>
             <div class="filter__bar  filter__bar--active"></div>
-            <div class="filter__control" style="left: 20px">&bull;</div>
-            <div class="filter__control" style="left: 160px">&bull;</div>
+            <button type="button" class="filter__control" style="left: 20px">
+              <span class="visually-hidden">
+                Выбрать минимальную цену
+              </span>
+            </button>
+            <button type="button" class="filter__control" style="left: 160px">
+              <span class="visually-hidden">
+                Выбрать максимальную цену
+              </span>
+            </button>
           </div>
-
           <div class="filter__inner">
             <label class="filter__price-label">
              от
-              <input class="filter__num" type="text"   name="min-price" placeholder="0">
+              <input class="filter__num" type="text" name="min-price" placeholder="0">
             </label>
             <label class="filter__price-label">
               до
-              <input class="filter__num" type="text"   name="max-price" placeholder="15 000">
+              <input class="filter__num" type="text" name="max-price" placeholder="15 000">
             </label>
           </div>
-
         </fieldset>
-
         <fieldset class="filter__grid-select">
-
           <legend class="filter__title">
             Сетка:
           </legend>
-
-          <input type="radio" name="radio-check" id="check1" value="adaptive" checked>
-          <label class="filter__radio" for="check1">Адаптивная</label>
-          <input type="radio" name="radio-check" id="check2" value="fixed">
-          <label class="filter__radio" for="check2">Фиксированная</label>
-          <input type="radio" name="radio-check" id="check3" value="fluid">
-          <label class="filter__radio" for="check3">Резиновая</label>
-
+          <input class="filter__radio  visually-hidden" type="radio" name="radio-check" id="check1" value="adaptive" checked>
+          <label class="filter__radio-label" for="check1">Адаптивная</label>
+          <input class="filter__radio  visually-hidden" type="radio" name="radio-check" id="check2" value="fixed">
+          <label class="filter__radio-label" for="check2">Фиксированная</label>
+          <input class="filter__radio  visually-hidden" type="radio" name="radio-check" id="check3" value="fluid">
+          <label class="filter__radio-label" for="check3">Резиновая</label>
         </fieldset>
-
         <fieldset class="filter__content-select">
-
           <legend class="filter__title">
             Особенности:
           </legend>
-
-          <input type="checkbox" name="checkbox" value="slider" id="check_slider" checked>
-          <label class="filter__checkbox" for="check_slider">
+          <input class="filter__checkbox  visually-hidden" type="checkbox" name="checkbox" value="slider" id="check_slider" checked>
+          <label class="filter__checkbox-label" for="check_slider">
             Слайдер
           </label>
-
-          <input type="checkbox" name="checkbox" value="features" id="check_features">
-          <label class="filter__checkbox" for="check_features">
+          <input class="filter__checkbox  visually-hidden" type="checkbox" name="checkbox" value="features" id="check_features">
+          <label class="filter__checkbox-label" for="check_features">
             Блок преимуществ
           </label>
-
-          <input type="checkbox" name="checkbox" value="news" id="check_news" checked>
-          <label class="filter__checkbox" for="check_news">
+          <input class="filter__checkbox  visually-hidden" type="checkbox" name="checkbox" value="news" id="check_news" checked>
+          <label class="filter__checkbox-label" for="check_news">
             Новости
           </label>
-
-          <input type="checkbox" name="checkbox" value="gallery" id="check_gallery" >
-          <label class="filter__checkbox" for="check_gallery">
+          <input class="filter__checkbox  visually-hidden" type="checkbox" name="checkbox" value="gallery" id="check_gallery">
+          <label class="filter__checkbox-label" for="check_gallery">
             Галерея
           </label>
-
-          <input type="checkbox" name="checkbox" value="cart" id="check_cart">
-          <label class="filter__checkbox" for="check_cart">
+          <input class="filter__checkbox  visually-hidden" type="checkbox" name="checkbox" value="cart" id="check_cart">
+          <label class="filter__checkbox-label" for="check_cart">
             Корзина
           </label>
-
         </fieldset>
-
         <button class="button  button--filter" type="submit">Показать</button>
-
       </form>
     </section>
-
     <div class="main-content__inner">
-
       <section class="sort">
         <h3 class="sort__title">
           Сортировать:
         </h3>
-
         <div class="sort__list">
           <a href="#" class="sort__item  sort__item--active">
             По цене
@@ -133,15 +112,12 @@
             По названию
           </a>
         </div>
-
         <div class="sort__controls">
           <a class="sort__control  sort__control--down  sort__control--active"></a>
           <a class="sort__control  sort__control--up"></a>
         </div>
       </section>
-
       <div class="catalog">
-
         <article class="product">
           <div class="product__dots"></div>
           <img class="product__image" src="img/img-sedona.jpg"   width="360" height="576" alt="Сайт для туристов   Sedona">
@@ -153,11 +129,9 @@
             <a class="button  button--product" href="#">9 900 руб.</a>
           </section>
         </article>
-
         <article class="product">
           <div class="product__dots"></div>
-          <img class="product__image" src="img/img-pink.jpg"   width="360" height="576" alt="Продуктовый лендинг
-           приложения для iOS и Android Pink">
+          <img class="product__image" src="img/img-pink.jpg"   width="360" height="576" alt="Продуктовый лендинг приложения для iOS и Android Pink">
           <section class="product__info">
             <a class="product__title" href="#">Pink App</a>
             <p class="product__description">
@@ -167,7 +141,6 @@
             <a class="button  button--product" href="#">9 900 руб.</a>
           </section>
         </article>
-
         <article class="product">
           <div class="product__dots"></div>
           <img class="product__image" src="img/img-barbershop.jpg"   width="360" height="576" alt="Сайт салона красоты   Barbershop">
@@ -179,7 +152,6 @@
             <a class="button  button--product" href="#">9 900 руб.</a>
           </section>
         </article>
-
         <article class="product">
           <div class="product__dots"></div>
           <img class="product__image" src="img/img-mishka.jpg" width="360" height="576" alt="Интернет-магазин вязаных игрушек Mishka">
@@ -191,7 +163,6 @@
             <a class="button  button--product" href="#">9 900 руб.</a>
           </section>
         </article>
-
         <article class="product">
           <div class="product__dots"></div>
           <img class="product__image" src="img/img-aplus.jpg" width="360" height="576" alt="Лендинг курсов повышения квалификации A Plus">
@@ -203,7 +174,6 @@
             <a class="button  button--product" href="#">9 900 руб.</a>
           </section>
         </article>
-
         <article class="product">
           <div class="product__dots"></div>
           <img class="product__image" src="img/img-kvast.jpg" width="360" height="576" alt="Промо-сайт производителя
@@ -217,19 +187,14 @@
             <a class="button  button--product" href="#">9 900 руб.</a>
           </section>
         </article>
-
       </div>
-
-
       <nav class="pagination">
         <a class="pagination__page  pagination__page--active">1</a>
         <a class="pagination__page" href="#">2</a>
         <a class="pagination__page" href="#">3</a>
         <a class="pagination__page  pagination__page--next" href="#">Следующая</a>
       </nav>
-
     </div>
-
   </main>
 
   <footer class="page-footer">
@@ -250,15 +215,12 @@
         </div>
       </div>
     </section>
-
     <div class="page-footer__inner">
-
     <section class="socials">
       <a class="socials__link  socials__link--vk" href="#">ВКонтакте</a>
       <a class="socials__link  socials__link--fb" href="#">Facebook</a>
       <a class="socials__link  socials__link--ig" href="#">Instagram</a>
     </section>
-
     <section class="page-footer__promo">
       <h2 class="page-footer__title">
           Давайте дружить, это выгодно!
@@ -267,34 +229,27 @@
         Скидка 10% для друзей из социальных сетей
       </p>
     </section>
-
   </div>
   </footer>
 
   <article class="modal-feedback">
     <a class="modal-feedback__close" href="catalog.html"></a>
-
       <h2 class="modal-feedback__title">
         Напишите нам
       </h2>
-
     <form class="feedback" method="post" action="#">
-
       <label class="feedback__label  feedback__label--name">
         Ваше имя:<br>
         <input class="feedback__input" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста" required>
       </label>
-
       <label class="feedback__label  feedback__label--email">
         Ваш email:<br>
         <input class="feedback__input" type="email" name="email" value="" placeholder="Для отправки ответа" required>
       </label>
-
       <label class="feedback__label">
         Текст письма:<br>
         <textarea class="feedback__text-field" name="text" placeholder="В свободной форме"></textarea>
       </label>
-
       <button class="button" type="submit">Отправить</button>
     </form>
   </article>
