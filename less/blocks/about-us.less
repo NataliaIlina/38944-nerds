@@ -1,89 +1,91 @@
-.about-us{
-  min-height: 525px;
+.about-us {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: space-between;
+  min-height: 525px;
   padding-top: 35px;
   color: @black;
   background-color: @white;
   border-bottom: 2px solid @gray-light;
 }
 
-.about-us__column{
+.about-us__column {
   width: 680px;
 
-  &--logo{
+  &--logo {
     width: 360px;
 
-    & .about-us__subtitle{
+    .about-us__subtitle {
       margin-bottom: 39px;
       text-align: center;
     }
 
-    & .about-us__description{
+    .about-us__description {
       line-height: 18px;
     }
   }
 }
 
-.about-us__title{
+.about-us__title {
   margin-bottom: 35px;
   font-size: 45px;
-  line-height: 45px;
   font-weight: @bold;
+  line-height: 45px;
 }
 
-.about-us__description{
+.about-us__description {
   .text();
+
   margin-bottom: 39px;
 }
 
-.about-us__subtitle{
+.about-us__subtitle {
   margin-bottom: 23px;
   font-size: @font-size;
   line-height: @line-height;
   text-transform: uppercase;
 }
 
-.about-us__list{
+.about-us__list {
   .text();
+
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.about-us__item{
+.about-us__item {
   position: relative;
   padding-left: 37px;
   margin-bottom: 24px;
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
-    margin-top: -1px;
     left: 0;
     width: 25px;
     height: 2px;
+    margin-top: -1px;
     background-color: @red;
   }
 }
 
-.about-us__logo{
+.about-us__logo {
   padding-top: 5px;
   margin-bottom: 15px;
 }
 
-.about-us__num{
+.about-us__num {
   display: inline-block;
-  vertical-align: top;
   width: 105px;
   margin-right: 10px;
   font-size: 45px;
-  line-height: 50px;
   font-weight: @bold;
+  line-height: 50px;
+  vertical-align: top;
 }
 
-.about-us sup{
+.about-us sup {
   font-size: 29px;
 }

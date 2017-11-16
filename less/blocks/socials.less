@@ -1,67 +1,68 @@
-.socials{
+.socials {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 260px;
   height: 80px;
 }
 
-.socials__link{
+.socials__link {
   position: relative;
   width: 80px;
   height: 80px;
-  text-indent: 100%;
   overflow: hidden;
+  text-indent: 100%;
   background-color: @gray;
   border-radius: 50%;
   transition: all 0.5s ease;
 
-  &--vk::after{
+  &--vk::after {
     content: "";
     position: absolute;
     top: 50%;
-    margin-top: -7px;
     left: 50%;
-    margin-left: -13px;
     width: 26px;
     height: 15px;
+    margin-top: -7px;
+    margin-left: -13px;
     background: url("../img/icons/css_sprite.png") -10px -45px;
   }
 
-  &--fb::after{
+  &--fb::after {
     content: "";
     position: absolute;
     top: 50%;
-    margin-top: -11px;
     left: 50%;
-    margin-left: -6px;
     width: 12px;
     height: 22px;
+    margin-top: -11px;
+    margin-left: -6px;
     background: url("../img/icons/css_sprite.png") -10px -121px;
   }
 
-  &--ig::after{
+  &--ig::after {
     content: "";
     position: absolute;
     top: 50%;
-    margin-top: -10px;
     left: 50%;
-    margin-left: -10px;
     width: 21px;
     height: 21px;
+    margin-top: -10px;
+    margin-left: -10px;
     background: url("../img/icons/css_sprite.png") -10px -80px;
   }
 
-  &:hover{
+  &:hover,
+  &:focus {
     background-color: @red-darken;
   }
 
-  &:active{
+  &:active {
     background-color: @red-dark;
-    box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.1) inset;
+    box-shadow: 0 3px 0 0 rgba(0, 1, 1, 0.1) inset;
   }
 
-  &:active::after{
+  &:active::after {
     opacity: 0.3;
   }
 }

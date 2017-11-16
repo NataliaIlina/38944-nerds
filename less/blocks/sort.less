@@ -1,80 +1,83 @@
-.sort{
+.sort {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
+  justify-content: space-between;
   height: 133px;
   padding-top: 53px;
 }
 
-.sort__title{
+.sort__title {
   margin: 0;
   font-size: @font-size-subtitle;
+  font-weight: @bold;
   line-height: @line-height-h2;
   color: @black;
-  font-weight: @bold;
   text-transform: uppercase;
 }
 
-.sort__list{
-  min-width: 272px;
+.sort__list {
   display: flex;
   justify-content: space-between;
+  min-width: 272px;
   margin-left: auto;
 }
 
-.sort__item{
+.sort__item {
   font-size: 14px;
   line-height: 18px;
-  text-transform: uppercase;
-  text-decoration: none;
   color: @black;
+  text-decoration: none;
+  text-transform: uppercase;
   opacity: 0.3;
 
-  &:hover{
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
-  &:active{
+  &:active {
     opacity: 1.0;
   }
 
-  &--active{
+  &--active {
     opacity: 1;
 
     &:hover,
-    &:active{
+    &:focus,
+    &:active {
       opacity: 1;
     }
   }
 }
 
-.sort__controls{
-  width: 40px;
-  margin-left: 48px;
+.sort__controls {
   display: flex;
   justify-content: space-between;
+  width: 40px;
+  margin-left: 48px;
 }
 
-.sort__control{
+.sort__control {
   width: 0;
   height: 0;
+  cursor: pointer;
   border: 5px solid #a6a6a6;
+  border-bottom: none;
   border-color: #a6a6a6 transparent;
   border-top-width: 10px;
-  border-bottom: none;
-  cursor: pointer;
   opacity: 0.2;
 
-  &--up{
+  &--up {
     border-top: none;
     border-bottom: 10px solid #a6a6a6;
   }
 
-  &:hover{
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 
-  &--active{
+  &--active {
     border-color: #231f20 transparent;
     opacity: 1;
   }
