@@ -23,6 +23,7 @@
     "del": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-csscomb": "^3.0.8",
     "gulp-csso": "latest",
     "gulp-imagemin": "latest",
     "gulp-less": "latest",
